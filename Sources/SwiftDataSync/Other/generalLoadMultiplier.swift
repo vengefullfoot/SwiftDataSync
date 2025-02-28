@@ -7,7 +7,7 @@ import UIKit
 var generalLoadMultiplier: TimeInterval {
     var multiplier: TimeInterval = 1
     
-    #if os(macOS)
+    #if !os(iOS) // to include visionOS
     let isUnplugged:Bool = false // TODO(later): This
     let batteryLevel: TimeInterval = 1
     #else
